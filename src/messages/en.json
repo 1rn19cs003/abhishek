@@ -1,0 +1,80 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "skills": "Skills",
+        "experience": "Experience",
+        "contact": "Contact",
+        "game": "Game"
+    },
+    "hero": {
+        "greeting": "Hi, I'm",
+        "title": "Full Stack Developer",
+        "subtitle": "Building scalable enterprise applications with modern technologies",
+        "cta": "View My Work",
+        "contact": "Get In Touch"
+    },
+    "about": {
+        "title": "About Me",
+        "description": "I'm a passionate full-stack developer with expertise in building modern web applications."
+    },
+    "projects": {
+        "title": "My Projects",
+        "viewAll": "View All Projects",
+        "liveDemo": "Live Demo",
+        "sourceCode": "Source Code",
+        "techUsed": "Technologies Used"
+    },
+    "skills": {
+        "title": "Technical Skills",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Database",
+        "devops": "DevOps",
+        "tools": "Tools"
+    },
+    "experience": {
+        "title": "Work Experience",
+        "present": "Present"
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "name": "Your Name",
+        "email": "Your Email",
+        "subject": "Subject",
+        "message": "Your Message",
+        "send": "Send Message",
+        "sending": "Sending...",
+        "success": "Message sent successfully!",
+        "error": "Failed to send message. Please try again."
+    },
+    "game": {
+        "title": "Discover Me Through Gaming",
+        "start": "Start Game",
+        "instructions": "Play the game to unlock fun facts about me!",
+        "level": "Level",
+        "score": "Score"
+    },
+    "resume": {
+        "download": "Download Resume",
+        "generate": "Generate Resume",
+        "generating": "Generating your resume...",
+        "manual": "Download PDF",
+        "dynamic": "Generate Custom Resume"
+    },
+    "ai": {
+        "greeting": "Hi! I'm your AI assistant. How can I help you today?",
+        "placeholder": "Ask me anything...",
+        "suggestions": {
+            "projects": "Show me frontend projects",
+            "resume": "Where can I see your resume?",
+            "contact": "How can I contact you?",
+            "skills": "What are your skills?"
+        }
+    },
+    "footer": {
+        "rights": "All rights reserved.",
+        "visitors": "Total Visitors"
+    }
+}
