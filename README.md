@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Abhishek Jaiswal - Portfolio Website
+
+A modern, full-stack portfolio website built with Next.js 15, Tailwind CSS, and Firebase.
+
+## Features
+
+- 🎨 **Modern UI/UX**: Responsive design with dark mode support
+- 🌍 **Internationalization**: English and Hindi support
+- 🤖 **AI Assistant**: Interactive chatbot interface
+- 🎮 **Gamified About Section**: Unlock fun facts by playing a game
+- 📱 **Admin Dashboard**: Manage projects, skills, and messages
+- ⚡ **Performance**: Optimized with Next.js App Router and Server Components
+
+## Tech Stack
+
+- **Frontend**: Next.js 15, React, Tailwind CSS, Framer Motion
+- **Backend**: Next.js API Routes, Firebase Admin SDK
+- **Database**: Firebase Firestore
+- **Authentication**: Firebase Auth
+- **Deployment**: Vercel (recommended)
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. **Environment Setup**:
+   Copy the environment variables from `ENV_TEMPLATE.md` to `.env.local` and fill in your credentials.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Run Development Server**:
+   ```bash
+   npm run dev
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. **Open Browser**:
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+- `src/app`: App Router pages and layouts
+- `src/components`: Reusable UI components
+- `src/lib`: Firebase and utility configurations
+- `src/messages`: Localization JSON files
+- `src/types`: TypeScript interfaces
 
-To learn more about Next.js, take a look at the following resources:
+## Admin Access
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Navigate to `/admin` to access the admin panel. Default credentials (mock):
+- Username: `admin`
+- Password: `admin`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+(Note: You should update the authentication logic in `src/app/[locale]/admin/page.tsx` to use Firebase Auth before deploying)
