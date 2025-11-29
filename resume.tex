@@ -1,0 +1,215 @@
+%-------------------------
+% Resume in Latex
+% Author : Abhishek Jaiswal
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins - optimized for one page
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.95in}
+\addtolength{\textheight}{1.5in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Tighter spacing for one page
+\renewcommand{\baselinestretch}{0.88}
+
+
+
+% Sections formatting - tighter for one page
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Abhishek Jaiswal} \\ \vspace{1pt}
+    \small +91-6386549132 $|$ \href{mailto:abhigrmr@gmail.com}{\underline{abhigrmr@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/abhishekjaiswal1308/}{\underline{abhishekjaiswal1308/}} $|$
+    \href{https://github.com/1rn19cs003}{\underline{github.com/1rn19cs003}}
+\end{center}
+
+%-----------Summary-----------
+\section{Summary}
+\resumeSubHeadingListStart
+    \item 
+   {Full Stack Developer with 1.8+ years of experience building scalable enterprise applications using Java Spring Boot, JavaScript, and microservices architecture. Expertise in RESTful APIs, cloud deployment (AWS), and frontend technologies (React, Node.js). Proven track record of delivering high-performance solutions for Fortune 500 clients with 92\% test coverage and 40\% efficiency improvements.
+}
+\resumeSubHeadingListEnd
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {RNS Institute of Technology}{Bangalore, KA}
+      {Bachelor of Engineering in Computer Science and  Engineering, CGPA: 8.6}{Aug 2019 -- Jun 2023}
+  \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, JavaScript, TypeScript, Python, SQL, HTML, CSS} \\
+     \textbf{Backend Frameworks}{: Spring Boot, Spring MVC, Spring Security, Node.js, Express.js, Nest.js, FastAPI} \\
+     \textbf{Frontend Technologies}{: React.js, Angular, GraphQL, Apollo Client, Responsive Design, Accessibility (WCAG)} \\
+     \textbf{Databases}{: MySQL, PostgreSQL, MongoDB, Redis} \\
+     \textbf{Cloud \& DevOps}{: AWS (S3, Lambda, EC2), Docker, Kubernetes, Rancher, Helm, CI/CD} \\
+     \textbf{Tools \& Practices}{: Git, Maven, Gradle, Swagger, REST APIs, Microservices, OAuth, JWT, RBAC} \\
+     \textbf{Testing \& Monitoring}{: JUnit, Mockito, Jest, Mocha, Datadog, Kafka} \\
+     \textbf{Coding Profiles}{: LeetCode, Codeforces, GFG - 300+ DSA problems solved.}\fontsize{0.1pt}{0.1pt}}
+ \end{itemize}
+%-----------EXPERIENCE-----------
+\section{Experience }
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+    {\href{https://hashedin.com}{\underline{HashedIn by Deloitte}, Bangalore, India
+}}{Jan 2024 -- Present}
+      {Java Spring Boot, JavaScript, React, Node.js, AWS, Microservices}{Software Developer}
+      \resumeItemListStart 
+\resumeItem{Developed RESTful APIs and microservices using Spring Boot and Node.js for Johnson \& Johnson's enterprise portal, improving efficiency by 40\% and reducing load time by 30\%.}
+\resumeItem{Built scalable backend services with Java Spring Boot for IOC project, implementing MVC architecture, RBAC authentication with Spring Security and JWT, and integrating 6+ microservices using AWS cloud.}
+\resumeItem{Implemented automated rollback feature across microservices, resolving 3+ critical bottlenecks and improving flow reliability by 40\%.}
+\resumeItem{Achieved 92\% test coverage using JUnit, Mockito, and Jest; built real-time data pipeline using Kafka for high-volume event processing.}
+\resumeItem{Deployed applications across 4 environments using Docker, Kubernetes, Helm, and Rancher with CI/CD automation.}
+\resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {\href{https://rightprompt.ai/}{\underline{Right Prompt Technologies}}}{Aug 2023 -- Dec 2023}
+      {Node.js, Angular, JavaScript, ServiceNow, REST APIs}{Software Developer}
+      \resumeItemListStart
+        \resumeItem{Developed REST APIs using Node.js and Express for AI-powered insurance recommendation system with ServiceNow integration.}
+        \resumeItem{Built POC for intelligent chatbot using JavaScript and Angular with OAuth 2.0 authentication and real-time security alerts.}
+    \resumeItemListEnd
+    \resumeSubheading
+      {\href{https://hashedin.com}{\underline{HashedIn By Deloitte}}}{Mar 2023 -- Jul 2023}
+      {JavaScript, Node.js, Flutter, AI/ML APIs}{Software Engineering Intern}
+      \resumeItemListStart
+        \resumeItem{Integrated 12+ Google Maps APIs and developed navigation algorithm with 30\% better accuracy than existing solutions.}
+        \resumeItem{Built AI-powered document analysis application using GPT-4 API and Node.js with RBAC, achieving 85\% accuracy and 20\% increase in user engagement.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{{\href{https://github.com/1rn19cs003/PlacementDrive}{\underline{Placement Management System}}}} $|$ \emph{Java Spring Boot, MySQL, REST APIs}}{Aug 2021 -- Aug 2022}
+          \resumeItemListStart
+            \resumeItem{Built full-stack placement portal using Spring Boot and MySQL with MVC architecture, RESTful APIs, JWT authentication, and RBAC, serving 500+ students and 50+ recruiters.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{{\href{https://srttender.com}{\underline{Temple Management Portal}}}} $|$ \emph{Node.js, React, MongoDB, AWS S3}}{Sept 2022 -- Oct 2022}
+          \resumeItemListStart
+            \resumeItem{Developed full-stack web application with Node.js REST API backend, React frontend, OAuth 2.0 authentication, and AWS S3 integration.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+   
+
+%-------------------------------------------
+\end{document}
