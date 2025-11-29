@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-8 md:mb-0">
                         <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                            Abhishek Jaiswal
+                            Abhishek Jaiswal 
                         </span>
                         <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
                             Building digital experiences that matter.
