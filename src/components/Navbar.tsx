@@ -6,6 +6,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX, FiMoon, FiSun, FiGlobe } from 'react-icons/fi';
+import styles from './Navbar.module.css';
 
 const Navbar = () => {
     const t = useTranslations('nav');
@@ -15,7 +16,6 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isDark, setIsDark] = useState(false);
 
-    // Handle scroll effect
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
@@ -24,7 +24,6 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Handle theme toggle
     useEffect(() => {
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             setIsDark(true);
@@ -65,25 +64,22 @@ const Navbar = () => {
     ];
 
     return (
-        <nav
-            className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
-                }`}
-        >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16">
-                    <div className="flex-shrink-0">
-                        <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${isDark ? styles.dark : ''}`}>
+            <div className={styles.container}>
+                <div className={styles.navContent}>
+                    <div>
+                        <Link href="/" className={styles.logo}>
                             AJ
                         </Link>
                     </div>
 
-                    <div className="hidden md:block">
-                        <div className="ml-10 flex items-baseline space-x-4">
+                    <div className={styles.desktopNav}>
+                        <div className={styles.navLinks}>
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                                    className={`${styles.navLink} ${isDark ? styles.dark : ''}`}
                                 >
                                     {link.name}
                                 </Link>
@@ -91,28 +87,25 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div className="hidden md:flex items-center space-x-4">
+                    <div className={styles.actions}>
                         <button
                             onClick={toggleLanguage}
-                            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+                            className={`${styles.iconButton} ${isDark ? styles.dark : ''}`}
                             aria-label="Toggle Language"
                         >
                             <FiGlobe className="w-5 h-5" />
                         </button>
                         <button
                             onClick={toggleTheme}
-                            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+                            className={`${styles.iconButton} ${isDark ? styles.dark : ''}`}
                             aria-label="Toggle Theme"
                         >
                             {isDark ? <FiSun className="w-5 h-5" /> : <FiMoon className="w-5 h-5" />}
                         </button>
                     </div>
 
-                    <div className="-mr-2 flex md:hidden">
-                        <button
-                            onClick={() => setIsOpen(!isOpen)}
-                            className="inline-flex items-center justify-center p-2 rounded-md hover:text-blue-600 focus:outline-none"
-                        >
+                    <div className={styles.mobileMenuButton}>
+                        <button onClick={() => setIsOpen(!isOpen)}>
                             {isOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
                         </button>
                     </div>
@@ -125,24 +118,24 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-white dark:bg-gray-900 shadow-xl"
+                        className={`${styles.mobileMenu} ${isDark ? styles.dark : ''}`}
                     >
-                        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        <div className={styles.mobileMenuContent}>
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 dark:hover:text-blue-400"
+                                    className={`${styles.mobileNavLink} ${isDark ? styles.dark : ''}`}
                                 >
                                     {link.name}
                                 </Link>
                             ))}
-                            <div className="flex items-center space-x-4 px-3 py-2">
-                                <button onClick={toggleLanguage} className="flex items-center space-x-2">
+                            <div className={styles.mobileActions}>
+                                <button onClick={toggleLanguage} className={`${styles.mobileActionButton} ${isDark ? styles.dark : ''}`}>
                                     <FiGlobe /> <span>Change Language</span>
                                 </button>
-                                <button onClick={toggleTheme} className="flex items-center space-x-2">
+                                <button onClick={toggleTheme} className={`${styles.mobileActionButton} ${isDark ? styles.dark : ''}`}>
                                     {isDark ? <FiSun /> : <FiMoon />} <span>{isDark ? 'Light Mode' : 'Dark Mode'}</span>
                                 </button>
                             </div>
